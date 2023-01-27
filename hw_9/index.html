@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Exercise 2</title>
+</head>
+
+<body bgcolor="#ccffff"> 
+<h1><span style="color: blueviolet;"><center>Calculator</center></span></h1>
+
+<form id="add_form" action="javascript:addData();"></form>
+<form id="dev_form" action="javascript:devData();"></form>
+<form id="mult_form" action="javascript:multData();"></form>
+<form id="division_form" action="javascript:divisionData();"></form>
+<form id="percent_form" action="javascript:percentData();"></form>
+
+<center>
+<table>
+<tr><td><input type="number" name="num1" id="num1" form="add_form" required></td>
+<td>+</td>
+<td><input type="number" name="num2" id="num2" form="add_form" required></td>
+<td><input type="submit" value="=" form="add_form"></td>
+<td><input type="text" name="add_res" id="add_res"></td></tr>
+</table>
+
+<table>
+    <tr><td><input type="number" name="num1" id="num1" form="dev_form" required></td>
+    <td>-</td>
+    <td><input type="number" name="num2" id="num2" form="dev_form" required></td>
+    <td><input type="submit" value="=" form="dev_form"></td>
+    <td><input type="text" name="dev_res" id="dev_res"></td></tr>
+</table>
+
+<table>
+    <tr><td><input type="number" name="num1" id="num1" form="mult_form" required></td>
+    <td>*</td>
+    <td><input type="number" name="num2" id="num2" form="mult_form" required></td>
+    <td><input type="submit" value="=" form="mult_form"></td>
+    <td><input type="text" name="mult_res" id="mult_res"></td></tr>
+</table>
+
+<table>
+    <tr><td><input type="number" name="num1" id="num1" form="division_form" required></td>
+    <td>/</td>
+    <td><input type="number" name="num2" id="num2" form="division_form" required></td>
+    <td><input type="submit" value="=" form="division_form"></td>
+    <td><input type="text" name="division_res" id="division_res"></td></tr>
+</table>
+
+<table>
+    <tr><td><input type="number" name="num1" id="num1" form="percent_form" required></td>
+    <td>%</td>
+    <td><input type="number" name="num2" id="num2" form="percent_form" required></td>
+    <td><input type="submit" value="=" form="percent_form"></td>
+    <td><input type="text" name="percent_res" id="percent_res"></td></tr>
+</table>
+</center>
+
+<script>
+function addData(){
+    let num1=0, num2=0;
+    num1=document.forms["add_form"].elements["num1"].value;
+    num2=document.forms["add_form"].elements["num2"].value;
+    let value=parseFloat(num1) + parseFloat(num2);
+    document.getElementById("add_res").value=value;
+    }
+function devData(){
+    let num1=0, num2=0;
+    num1=document.forms["dev_form"].elements["num1"].value;
+    num2=document.forms["dev_form"].elements["num2"].value;
+    let value=parseFloat(num1) - parseFloat(num2);
+    document.getElementById("dev_res").value=value;
+    }
+function multData(){
+    let num1=0, num2=0;
+    num1=document.forms["mult_form"].elements["num1"].value;
+    num2=document.forms["mult_form"].elements["num2"].value;
+    let value=parseFloat(num1) * parseFloat(num2);
+    document.getElementById("mult_res").value=value;
+    }
+function divisionData(){
+    let num1=0, num2=0;
+    num1=document.forms["division_form"].elements["num1"].value;
+    num2=document.forms["division_form"].elements["num2"].value;
+    let value=parseFloat(num1) / parseFloat(num2);
+    document.getElementById("division_res").value=value;
+    }
+function percentData(){
+    let num1=0, num2=0;
+    num1=document.forms["percent_form"].elements["num1"].value;
+    num2=document.forms["percent_form"].elements["num2"].value;
+    let value=parseFloat(num1) % parseFloat(num2);
+    document.getElementById("percent_res").value=value;
+    }
+</script> 
+
+</body>
+
+</html>
